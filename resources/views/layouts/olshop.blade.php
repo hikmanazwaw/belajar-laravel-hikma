@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | Olshop</title>
+    <title>@yield('title') | HikmaTown</title>
     <style>
         :root {
             color-scheme: light;
@@ -99,7 +99,7 @@
 <body>
     <header class="site-header">
         <nav class="nav" aria-label="Navigasi utama">
-            <a class="brand" href="{{ route('home') }}">Olshop</a>
+            <a class="brand" href="{{ route('home') }}">Hikma Town</a>
             <div class="nav-links">
                 <a href="{{ route('home') }}">Home</a>
                 <a href="{{ route('product') }}">Product</a>
@@ -114,6 +114,6 @@
         @yield('content')
     </main>
 
-    <footer class="site-footer">Belanja mudah dan nyaman di Olshop.</footer>
+    <footer class="site-footer">Pencarian dan penjelasan mudah dilakukan disini.</footer>
 </body>
 </html>
