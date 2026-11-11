@@ -65,6 +65,20 @@
         .product-card h2 { margin: 0; font-size: 1.3rem; }
         .price { margin: 12px 0 0; color: #596174; }
         .text-link { display: inline-block; margin-top: 20px; color: #4f46e5; font-weight: 700; text-decoration: none; }
+        .table-wrap { margin-top: 32px; overflow-x: auto; border: 1px solid #e7eaf1; border-radius: 16px; background: #fff; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 16px 20px; border-bottom: 1px solid #edf0f5; }
+        th { background: #f8f9fc; color: #596174; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; }
+        tbody tr:last-child td { border-bottom: 0; }
+        tbody tr:hover { background: #fafaff; }
+        .form-card { max-width: 620px; margin-top: 30px; padding: 28px; border: 1px solid #e7eaf1; border-radius: 18px; background: #fff; }
+        .form-field { display: grid; gap: 8px; margin-bottom: 20px; }
+        .form-field label { font-weight: 700; }
+        .form-field input { width: 100%; padding: 12px 14px; border: 1px solid #d5dae5; border-radius: 9px; color: #172033; font: inherit; }
+        .form-field input:focus { border-color: #4f46e5; outline: 3px solid #4f46e522; }
+        .field-error { margin: 0; color: #b42318; font-size: .9rem; }
+        .result-card { max-width: 620px; margin-top: 24px; padding: 24px; border: 1px solid #c9c7ff; border-radius: 16px; background: #f1f0ff; }
+        .result-value { margin: 8px 0 0; color: #4338ca; font-size: 1.8rem; font-weight: 800; }
         .detail-card {
             max-width: 620px;
             margin-top: 30px;
@@ -77,7 +91,7 @@
         .site-footer { padding: 22px 20px; border-top: 1px solid #e5e9f2; color: #7a8292; text-align: center; }
         @media (max-width: 520px) {
             .nav { min-height: 68px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding: 14px 0; }
-            .nav-links { gap: 16px; }
+            .nav-links { gap: 10px 16px; }
             main { padding-top: 42px; }
         }
     </style>
@@ -90,6 +104,8 @@
                 <a href="{{ route('home') }}">Home</a>
                 <a href="{{ route('product') }}">Product</a>
                 <a href="{{ route('about') }}">About</a>
+                <a href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
+                <a href="{{ route('kalkulator.segitiga') }}">Kalkulator</a>
             </div>
         </nav>
     </header>
