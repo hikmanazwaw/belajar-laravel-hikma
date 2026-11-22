@@ -12,6 +12,10 @@ class EmployeSeeder extends Seeder
      */
     public function run(): void
     {
-        Employe::factory()->count(5)->create();
+        $missingEmployes = max(0, 20 - Employe::query()->count());
+
+        if ($missingEmployes > 0) {
+            Employe::factory()->count($missingEmployes)->create();
+        }
     }
 }
