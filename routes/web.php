@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\MahasiswaController;
+use Illuminate\Support\Facades\Route;
 
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/', 'home');
+    Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::get('/home', 'home')->name('home');
     Route::get('/product', 'product')->name('product');
     Route::get('/about', 'about')->name('about');
