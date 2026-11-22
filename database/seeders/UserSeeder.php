@@ -11,14 +11,21 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::query()->firstOrCreate(
-            ['email' => 'admin.demo@example.test'],
-            [
-                'nama' => 'Admin Demo',
-                'password' => Hash::make(Str::random(40)),
-                'foto' => '',
-                'role' => 'admin',
-            ],
-        );
+        $admin = User::query()->firstOrNew(['email' => 'admin.demo@example.test']);
+        $adminPassword = config('auth.demo_admin_password');
+
+        $admin->nama = 'Admin Demo';
+        $admin->foto = '';
+        $admin->role = 'admin';
+
+        if (! $admin->exists || (is_string($adminPassword) && $adminPassword !== '')) {
+            $admin->password = Hash::make(
+                is_string($adminPassword) && $adminPassword !== ''
+                    ? $adminPassword
+                    : Str::random(40),
+            );
+        }
+
+        $admin->save();
     }
 }

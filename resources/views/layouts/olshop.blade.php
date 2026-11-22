@@ -28,7 +28,10 @@
         .brand { color: #4f46e5; font-size: 1.3rem; font-weight: 800; text-decoration: none; }
         .nav-links { display: flex; flex-wrap: wrap; gap: 24px; }
         .nav-links a { color: #596174; font-size: .95rem; text-decoration: none; }
+        .nav-links form { margin: 0; }
+        .nav-links button { padding: 0; border: 0; background: transparent; color: #596174; font: inherit; font-size: .95rem; cursor: pointer; }
         .nav-links a:hover, .text-link:hover { color: #4338ca; }
+        .nav-links button:hover { color: #4338ca; }
         main { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 80px; }
         .eyebrow { margin: 0 0 12px; color: #4f46e5; font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
         h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -.045em; line-height: 1.1; }
@@ -107,6 +110,14 @@
                 <a href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
                 <a href="{{ route('employes.index') }}">Pegawai</a>
                 <a href="{{ route('kalkulator.segitiga') }}">Kalkulator</a>
+                @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}">Login</a>
+                @endauth
             </div>
         </nav>
     </header>

@@ -2,10 +2,21 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class KalkulatorControllerTest extends TestCase
 {
+    use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->actingAs(User::factory()->create());
+    }
+
     public function test_laman_kalkulator_menampilkan_form_segitiga(): void
     {
         $this->get('/kalkulator/segitiga')

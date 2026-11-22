@@ -39,6 +39,19 @@
             text-decoration: none;
         }
         .sidebar-links a:hover, .sidebar-links a[aria-current="page"] { background: #eef0ff; color: #4338ca; }
+        .sidebar-logout {
+            width: 100%;
+            padding: 11px 12px;
+            border: 0;
+            border-radius: 9px;
+            background: transparent;
+            color: #b42318;
+            font: inherit;
+            font-size: .95rem;
+            text-align: left;
+            cursor: pointer;
+        }
+        .sidebar-logout:hover { background: #fff1f0; }
         .dashboard-content { min-width: 0; padding: 48px clamp(24px, 5vw, 64px); }
         .dashboard-content h1 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; }
         .dashboard-content p { max-width: 680px; margin: 16px 0 0; color: #667085; font-size: 1.05rem; line-height: 1.75; }
@@ -134,6 +147,10 @@
                     <a href="{{ route('employes.index') }}" @if (request()->routeIs('employes.*')) aria-current="page" @endif>Pegawai</a>
                     <a href="{{ route('kalkulator.segitiga') }}">Kalkulator</a>
                 </div>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button class="sidebar-logout" type="submit">Logout</button>
+                </form>
             </nav>
         </aside>
 
