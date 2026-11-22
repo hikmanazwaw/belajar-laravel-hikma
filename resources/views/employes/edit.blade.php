@@ -3,6 +3,7 @@
 @section('title', 'Ubah Pegawai')
 
 @section('content')
+//membuat edit data CRUD
     <div class="page-heading">
         <div>
             <h1>Ubah Data Pegawai</h1>
