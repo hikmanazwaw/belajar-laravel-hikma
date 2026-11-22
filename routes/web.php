@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\KalkulatorController;
 use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ Route::controller(DashboardController::class)->group(function () {
 
 Route::get('/daftar/mahasiswa', [MahasiswaController::class, 'index'])
     ->name('mahasiswa.index');
+
+Route::resource('employes', EmployeController::class);
 
 Route::controller(KalkulatorController::class)->prefix('kalkulator')->name('kalkulator.')->group(function () {
     Route::get('/segitiga', 'segitiga')->name('segitiga');

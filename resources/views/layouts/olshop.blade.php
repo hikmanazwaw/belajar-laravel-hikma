@@ -105,6 +105,7 @@
                 <a href="{{ route('product') }}">Product</a>
                 <a href="{{ route('about') }}">About</a>
                 <a href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
+                <a href="{{ route('employes.index') }}">Pegawai</a>
                 <a href="{{ route('kalkulator.segitiga') }}">Kalkulator</a>
             </div>
         </nav>
