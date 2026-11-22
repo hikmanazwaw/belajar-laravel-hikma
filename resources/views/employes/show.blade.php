@@ -3,6 +3,7 @@
 @section('title', 'Detail Pegawai')
 
 @section('content')
+//membuat show data CRUD
     <div class="page-heading">
         <div>
             <h1>Detail Pegawai</h1>
