@@ -14,10 +14,10 @@ Aplikasi latihan Laravel untuk Blade, Eloquent, migration, seeding, CRUD pegawai
 
 ## Akun demo
 
-| Kolom | Nilai |
-| --- | --- |
-| Email | `admin.demo@example.test` |
-| Password | Nilai yang Anda atur sendiri pada `DEMO_ADMIN_PASSWORD` di `.env` |
+| Kolom    | Nilai                     |
+| -------- | ------------------------- |
+| Email    | `admin.demo@example.test` |
+| Password | `demo`                    |
 
 Password tidak disimpan di README atau source code. Atur password lokal sebelum menjalankan seeder.
 
